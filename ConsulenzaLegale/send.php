@@ -46,38 +46,121 @@ $controller = new Controller();
 	<body>
 	<?php include 'header.php' ?>
 	<div class="container">
-		<div class="row">
-				<div class="col s12"><h5>Invia gratuitamente una richiesta<i class="mdi-content-mail left small"></i></h5></div>
-		</div>
-		<form class="col s12" name="requestForm" action="send.php" method="post">
-			<div class="row">
-				<div class="input-field col s12 m6 l6">
-					<i class="material-icons prefix">account_circle</i>
-					<input id="name" type="text" class="validate" required>
-					<label for="name" data-error="Nome non corretto" data-success="OK">Nome</label>
+	<?php if (isset($_POST['name'])) {
+			$isDelivered = $controller->sendMail($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_POST['file']);
+				if ($isDelivered) { ?>
+					<div class="row">
+						<div class="col s12"><h5>Risultato Operazione<i class="mdi-action-settings left small"></i></h5></div>
+					</div>
+					<div class="card-panel">
+						<div class="row">
+							<div class="col s12"><h5>Operazione eseguita con successo<i class="material-icons left small">done</i></h5></div>
+						</div>
+					</div>
+					<div class="row" style="margin-right:0px;">
+						<a class="waves-effect waves-light btn blue darken-4 right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
+					</div>
+					<?php } else { ?>
+					<div class="row">
+						<div class="col s12"><h5>Errore<i class="mdi-content-block left"></i></h5></div>
+					</div>
+					<div class="card-panel">
+						<div class="row">
+							<h5>Al momento non è possibile inoltrare le richieste. Ci scusiamo per l'inconveniente. Per favore riprovate in un secondo momento</h5>
+						</div>
+					</div>
+					<div class="row" style="margin-right:0px;">
+						<a class="waves-effect waves-light btn blue darken-4 right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
+					</div>
+					<?php }
+				} else {?>
+					<div class="row">
+							<div class="col s12"><h5>Invia gratuitamente una richiesta<i class="mdi-content-mail left small"></i></h5></div>
+					</div>
+					<form class="col s12" name="requestForm" action="send.php" method="post">
+						<div class="row">
+							<div class="input-field col s12 m6 l6">
+								<i class="material-icons prefix">account_circle</i>
+								<input id="name" name="name" type="text" class="validate" required>
+								<label for="name" data-error="Nome non corretto" data-success="OK">Nome</label>
+							</div>
+							<div class="input-field col s12 m6 l6">
+								<i class="material-icons prefix">contacts</i>
+								<input id="surname" name="surname" type="text" class="validate" required>
+								<label for="surname" data-error="Cognome non corretto" data-success="OK">Cognome</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 m6 l6">
+								<i class="material-icons prefix">mail</i>
+								<input id="email" name="email" type="email" class="validate" required>
+								<label for="email" data-error="Email non corretta" data-success="OK">Email</label>
+							</div>
+							<div class="input-field col s12 m6 l6">
+								<i class="material-icons prefix">phone</i>
+								<input id="phone" name="phone" type="tel" class="validate" required>
+								<label for="phone" data-error="Numero telefonico non corretto" data-success="OK">Telefono</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 m6 l6">
+								<i class="material-icons prefix">report_problem</i>
+							    <select id="motivation" name="motivation">
+							      <option value="" disabled selected>Scegli</option>
+							      <option value="1">Verbale</option>
+							      <option value="2">Cartella Esattoriale</option>
+							    </select>
+							    <label>Motivazione</label>
+							</div>
+							<div class="input-field col s12 m6 l6">
+								<i class="material-icons prefix">play_for_work</i>
+								<input id="date" name="date" type="date" class="datepicker" required>
+								<label for="date">Data notifica atto</label>
+							</div>
+						</div>
+						<div class="row">
+						    <div class="input-field col s12 m12 l12 tooltipped" data-tooltip="Spiegaci il perche' del ricorso">
+								<i class="material-icons prefix">note_add</i>
+								<textarea id="misc" name="misc" class="materialize-textarea" maxlength="160" length="160"></textarea>
+								<label for="misc">Varie ed Eventuali</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="file-field input-field col s12 m12 l12">
+							<i class="material-icons prefix">receipt</i>
+								<div class="btn right" style="margin-left:10px">
+									<span>File</span>
+									<input type="file">
+								</div>
+								<div class="file-path-wrapper">
+									<input id="file" name="file" class="file-path validate" style="margin-left:35px" type="text" placeholder="Allega file verbale o archivio .zip">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s6 m12 l12">
+								<div class="g-recaptcha" data-sitekey="<?php echo RC_SECRET_SITE; ?>" data-size="compact"></div>
+							</div>
+							<div class="input-field col s6 m12 l12">	
+								<button style="margin-top:25px;" class="btn waves-effect waves-light blue darken-4 right" type="submit" name="register_button">Invia
+									<i class="material-icons">done</i>
+								</button>
+							</div>
+						</div>
+					</form>
 				</div>
-				<div class="input-field col s12 m6 l6">
-					<i class="material-icons prefix">contacts</i>
-					<input id="surname" type="text" class="validate" required>
-					<label for="surname" data-error="Cognome non corretto" data-success="OK">Cognome</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12 m6 l6">
-					<i class="material-icons prefix">mail</i>
-					<input id="email" type="email" class="validate" required>
-					<label for="email" data-error="Email non corretta" data-success="OK">Email</label>
-				</div>
-				<div class="input-field col s12 m6 l6">
-					<i class="material-icons prefix">phone</i>
-					<input id="phone" type="tel" class="validate" required>
-					<label for="phone" data-error="Numero telefonico non corretto" data-success="OK">Telefono</label>
-				</div>
-			</div>
-		</form>
-	</div>
-	<?php include 'footer.php'; ?>
+	<?php } include 'footer.php'; ?>
 
+	<script>
+	$(document).ready(function() {
+		$('select').material_select();
+	  });
+	$('.datepicker').pickadate({
+	    selectMonths: true, // Creates a dropdown to control month
+	    selectYears: 15, // Creates a dropdown of 15 years to control year
+	    format: 'dd/mm/yyyy'
+	  });
+	</script>
 	</body>
 	
 	</html>
