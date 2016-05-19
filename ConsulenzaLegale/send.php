@@ -33,7 +33,7 @@ $controller = new Controller();
 			<meta name="theme-color" content="#ffffff">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 			<meta property="og:title" content="Ricorso Verbali C.d.S.">
-			<meta property="og:image" content="http://www.example.com/public/img/logo.png">
+			<meta property="og:image" content="http://www.example.com/public/img/logo.png"><!-- TODO Modificare -->
 			<meta property="og:site_name" content="Ricorso Verbali C.d.S.">
 			<meta property="og:description" content="Ricorso Verbali C.d.S. - Richiedi un parere GRATUITO!!!">
 			<meta property="og:locale" content="it_IT">
@@ -75,8 +75,9 @@ $controller = new Controller();
 					<?php }
 				} else {?>
 					<div class="row">
-							<div class="col s12"><h5>Invia gratuitamente una richiesta<i class="material-icons prefix left">email</i></h5></div>
+							<div class="col s12"><h5>Invia gratuitamente una richiesta<i class="material-icons prefix left">send</i></h5></div>
 					</div>
+					<div class="card-panel">
 					<form class="col s12" name="requestForm" action="send.php" method="post">
 						<div class="row">
 							<div class="input-field col s12 m12 l12">
@@ -99,7 +100,7 @@ $controller = new Controller();
 						</div>
 						<div class="row">
 							<div class="input-field col s12 m6 l6">
-								<i class="material-icons prefix">report_problem</i>
+								<i class="material-icons prefix">help</i>
 							    <select id="motivation" name="motivation">
 							      <option value="Richiesta Generica" selected>Richiesta Generica</option>
 							      <option value="Verbale">Verbale</option>
@@ -108,7 +109,7 @@ $controller = new Controller();
 							    <label>Motivazione</label>
 							</div>
 							<div class="input-field col s12 m6 l6">
-								<i class="material-icons prefix">play_for_work</i>
+								<i class="material-icons prefix">date_range</i>
 								<input id="date" name="date" type="date" class="datepicker">
 								<label for="date">Data notifica atto</label>
 							</div>
@@ -116,13 +117,13 @@ $controller = new Controller();
 						<div class="row">
 						    <div class="input-field col s12 m12 l12 tooltipped" data-tooltip="Spiegaci il perche' del ricorso">
 								<i class="material-icons prefix">note_add</i>
-								<textarea id="misc" name="misc" class="materialize-textarea" maxlength="160" length="160"></textarea>
+								<textarea id="misc" name="misc" class="materialize-textarea" maxlength="160"></textarea>
 								<label for="misc">Varie ed Eventuali</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="file-field input-field col s12 m12 l12">
-							<i class="material-icons prefix">receipt</i>
+							<i class="material-icons prefix">attach_file</i>
 								<div class="btn right" style="margin-left:10px">
 									<span>File</span>
 									<input type="file">
@@ -133,16 +134,15 @@ $controller = new Controller();
 							</div>
 						</div>
 						<div class="row">
-							<div class="input-field col s6 m12 l12">
-								<div class="g-recaptcha" data-sitekey="<?php echo RC_SECRET_SITE; ?>" data-size="compact"></div>
-							</div>
-							<div class="input-field col s6 m12 l12">	
+							<div class="input-field col s12 m12 l12">
+								<div style="align:center;display:inline-table" class="g-recaptcha" data-sitekey="<?php echo RC_SECRET_SITE; ?>" data-size="compact"></div>
 								<button style="margin-top:25px;" class="btn waves-effect waves-light blue darken-4 right" type="submit" name="register_button">Invia
-									<i class="material-icons">done</i>
+									<i class="material-icons">send</i>
 								</button>
 							</div>
 						</div>
 					</form>
+					</div>
 				</div>
 	<?php } include 'footer.php'; ?>
 

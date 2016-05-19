@@ -32,7 +32,7 @@ autoload();
 			<meta name="theme-color" content="#ffffff">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 			<meta property="og:title" content="Ricorso Verbali C.d.S.">
-			<meta property="og:image" content="http://www.example.com/public/img/logo.png">
+			<meta property="og:image" content="http://www.example.com/public/img/logo.png"> <!-- TODO Modificare -->
 			<meta property="og:site_name" content="Ricorso Verbali C.d.S.">
 			<meta property="og:description" content="Ricorso Verbali C.d.S. - Richiedi un parere GRATUITO!!!">
 			<meta property="og:locale" content="it_IT">
@@ -43,7 +43,19 @@ autoload();
 	
 	<body>
 	<?php include 'header.php' ?>
-	CONTENT
+	<div class="container" style="width: 90%;margin-bottom: 100">
+		<div class="row">
+			<div class="col s12 center"><a href="send.php"><img src="public/img/logo.png"></a></div>
+			<div class="col s12 center"><h4 class="col s12 center">Ricorso Verbali C.d.S.</h4></div>
+			<div class="col s12 center"><h5>Richiedi un parere GRATUITO!!!</h5></div>
+		</div>
+		<div class="row">
+			<div class="col s6 m3 l3 left"><a href="who.php"><i class="material-icons right">perm_identity</i></a></div>
+			<div class="col s6 m3 l3 center"><a href="service.php"><i class="material-icons right">room_service</i></a></div>
+			<div class="col s6 m3 l3"><a href="cons.php"><i class="material-icons right">info_outline</i></a></div>
+			<div class="col s6 m3 l3"><a href="contact.php"><i class="material-icons right">contacts</i></div>
+		</div>
+	</div>
 	<?php include 'footer.php'; ?>
 
 	</body>

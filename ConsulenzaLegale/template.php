@@ -32,7 +32,7 @@ autoload();
 			<meta name="theme-color" content="#ffffff">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 			<meta property="og:title" content="Ricorso Verbali C.d.S.">
-			<meta property="og:image" content="http://www.example.com/public/img/logo.png">
+			<meta property="og:image" content="http://www.example.com/public/img/logo.png"> <!-- TODO Modificare -->
 			<meta property="og:site_name" content="Ricorso Verbali C.d.S.">
 			<meta property="og:description" content="Ricorso Verbali C.d.S. - Richiedi un parere GRATUITO!!!">
 			<meta property="og:locale" content="it_IT">
@@ -43,7 +43,14 @@ autoload();
 	
 	<body>
 	<?php include 'header.php' ?>
-	CONTENT
+	<div class="container" style="width: 90%;margin-bottom: 100">
+		<div class="row">
+			<div class="col s12"><h5>TITOLO<i class="material-icons prefix left">bookmark_border</i></i></h5></div>
+		</div>
+		<div class="card-panel">
+			CONTENUTO
+		</div>
+	</div>
 	<?php include 'footer.php'; ?>
 
 	</body>
