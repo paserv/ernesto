@@ -47,14 +47,14 @@ $controller = new Controller();
 	<?php include 'header.php' ?>
 	<div class="container">
 	<?php if (isset($_POST['name'])) {
-			$isDelivered = $controller->sendMail($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_POST['file']);
+			$isDelivered = $controller->sendMail($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_POST['file']);
 				if ($isDelivered) { ?>
 					<div class="row">
-						<div class="col s12"><h5>Risultato Operazione<i class="mdi-action-settings left small"></i></h5></div>
+						<div class="col s12"><h5>Risultato Operazione<i class="material-icons prefix left">thumb_up</i></h5></div>
 					</div>
 					<div class="card-panel">
 						<div class="row">
-							<div class="col s12"><h5>Operazione eseguita con successo<i class="material-icons left small">done</i></h5></div>
+							<div class="col s12"><h5>Operazione eseguita con successo!</h5></div>
 						</div>
 					</div>
 					<div class="row" style="margin-right:0px;">
@@ -62,11 +62,11 @@ $controller = new Controller();
 					</div>
 					<?php } else { ?>
 					<div class="row">
-						<div class="col s12"><h5>Errore<i class="mdi-content-block left"></i></h5></div>
+						<div class="col s12"><h5>Errore<i class="material-icons left small">thumb_down</i></h5></div>
 					</div>
 					<div class="card-panel">
 						<div class="row">
-							<h5>Al momento non è possibile inoltrare le richieste. Ci scusiamo per l'inconveniente. Per favore riprovate in un secondo momento</h5>
+							<div class="col s12"><h5>Al momento non &eacute; possibile inoltrare le richieste. Ci scusiamo per l'inconveniente. Riprovare in un secondo momento</h5></div>
 						</div>
 					</div>
 					<div class="row" style="margin-right:0px;">
@@ -75,30 +75,25 @@ $controller = new Controller();
 					<?php }
 				} else {?>
 					<div class="row">
-							<div class="col s12"><h5>Invia gratuitamente una richiesta<i class="mdi-content-mail left small"></i></h5></div>
+							<div class="col s12"><h5>Invia gratuitamente una richiesta<i class="material-icons prefix left">email</i></h5></div>
 					</div>
 					<form class="col s12" name="requestForm" action="send.php" method="post">
 						<div class="row">
-							<div class="input-field col s12 m6 l6">
+							<div class="input-field col s12 m12 l12">
 								<i class="material-icons prefix">account_circle</i>
 								<input id="name" name="name" type="text" class="validate" required>
-								<label for="name" data-error="Nome non corretto" data-success="OK">Nome</label>
-							</div>
-							<div class="input-field col s12 m6 l6">
-								<i class="material-icons prefix">contacts</i>
-								<input id="surname" name="surname" type="text" class="validate" required>
-								<label for="surname" data-error="Cognome non corretto" data-success="OK">Cognome</label>
+								<label for="name" data-error="Nome non corretto" data-success="OK">Nome e Cognome</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12 m6 l6">
 								<i class="material-icons prefix">mail</i>
-								<input id="email" name="email" type="email" class="validate" required>
+								<input id="email" name="email" type="email" class="validate">
 								<label for="email" data-error="Email non corretta" data-success="OK">Email</label>
 							</div>
 							<div class="input-field col s12 m6 l6">
 								<i class="material-icons prefix">phone</i>
-								<input id="phone" name="phone" type="tel" class="validate" required>
+								<input id="phone" name="phone" type="tel" class="validate">
 								<label for="phone" data-error="Numero telefonico non corretto" data-success="OK">Telefono</label>
 							</div>
 						</div>
@@ -106,15 +101,15 @@ $controller = new Controller();
 							<div class="input-field col s12 m6 l6">
 								<i class="material-icons prefix">report_problem</i>
 							    <select id="motivation" name="motivation">
-							      <option value="" disabled selected>Scegli</option>
-							      <option value="1">Verbale</option>
-							      <option value="2">Cartella Esattoriale</option>
+							      <option value="Richiesta Generica" selected>Richiesta Generica</option>
+							      <option value="Verbale">Verbale</option>
+							      <option value="Cartella Esattoriale">Cartella Esattoriale</option>
 							    </select>
 							    <label>Motivazione</label>
 							</div>
 							<div class="input-field col s12 m6 l6">
 								<i class="material-icons prefix">play_for_work</i>
-								<input id="date" name="date" type="date" class="datepicker" required>
+								<input id="date" name="date" type="date" class="datepicker">
 								<label for="date">Data notifica atto</label>
 							</div>
 						</div>

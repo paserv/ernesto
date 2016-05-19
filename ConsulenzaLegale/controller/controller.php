@@ -3,18 +3,26 @@ class Controller {
 	/**
 	 * MAIL CONTROLS
 	 */
-	function sendMail($name, $surname, $email, $phone, $motiv, $date, $misc, $attachment) {
+	function sendMail($name, $mail, $phone, $motiv, $date, $misc, $attachment) {
 		$email = new PHPMailer();
-		$email -> From = $email;
-		$email -> FromName = $name . ' ' . $surname . ' from Ricorso Verbali C.d.S.';
-		$email -> Subject = $motiv . ' - Ricorso Verbali C.d.S.';
-		$email -> Body = 'Nome: ' . $name . '\nCognome: ' . $surname . '\nMail: ' . $mail . '\nTelefono: ' . $phone . '\nMotivazione: ' . $motiv . '\nData ricevuta notifica atto: ' . $date . '\nVarie ed Eventuali: ' . $misc;
+		$nome = !empty($name) ? $name : 'Nessun nome specificato';
+		//$mail_ = !empty($mail) ? $mail : 'Nessuna email specificata';
+		$telefono = !empty($phone) ? $phone : 'Nessun telefono specificato';
+		$motivazione = !empty($motiv) ? $motiv : 'Richiesta Generica';
+		$dataNotifica = !empty($date) ? $date : 'Nessuna data specificata';
+		$varie = !empty($misc) ? $misc : 'Nessuna informazione aggiuntiva inserita';
+		
+		$email -> From = $mail;
+		$email -> FromName = $nome;
+		$email -> Subject = $nome . ' - Motivazione: ' . $motivazione;
+		$email -> Body = 'Nominativo: ' . $nome . '\nMail: ' . $mail . '\nTelefono: ' . $telefono . '\nMotivazione: ' . $motivazione . '\nData ricevuta notifica atto: ' . $dataNotifica . '\nVarie ed Eventuali: ' . $varie;
+		if (!empty($attachment)) {
+			$file_to_attach = $attachment;
+			$email -> AddAttachment( $file_to_attach , 'NameOfFile.pdf' );
+		}
+
 		$email -> AddAddress(DESTINATION_MAIL);
-		
-		$file_to_attach = 'PATH_OF_YOUR_FILE_HERE';
-		
-		$email -> AddAttachment( $file_to_attach , 'NameOfFile.pdf' );
-		
+
 		return $email->Send();
 	}
 	
