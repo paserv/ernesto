@@ -46,34 +46,49 @@ $controller = new Controller();
 	<body>
 	<?php include 'header.php' ?>
 	<div class="container">
-	<?php if (isset($_POST['name'])) {
-			$isDelivered = $controller->sendMail($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_POST['file']);
-				if ($isDelivered) { ?>
+	<?php if (isset($_POST['g-recaptcha-response'])) {
+			$isRobot = $controller->checkIsRobot($_POST['g-recaptcha-response']);
+			if ($isRobot) { ?>
 					<div class="row">
-						<div class="col s12"><h5>Risultato Operazione<i class="material-icons prefix left">thumb_up</i></h5></div>
+						<div class="col s12"><h5>Errore Captcha<i class="material-icons left">block</i></h5></div>
 					</div>
 					<div class="card-panel">
 						<div class="row">
-							<div class="col s12"><h5>Operazione eseguita con successo!</h5></div>
+							<h6>Dimostra di non essere un robot per favore!</h6>
 						</div>
 					</div>
 					<div class="row" style="margin-right:0px;">
-						<a class="waves-effect waves-light btn blue darken-4 right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
+						<a class="btn waves-effect waves-light deep-orange darken-4 right" href="send.php"><i class="material-icons right">cached</i>Riprova</a>
 					</div>
-					<?php } else { ?>
-					<div class="row">
-						<div class="col s12"><h5>Errore<i class="material-icons left small">thumb_down</i></h5></div>
-					</div>
-					<div class="card-panel">
+			<?php } else {
+					$isDelivered = $controller->sendMail($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_POST['file']);
+					if ($isDelivered) { ?>
 						<div class="row">
-							<div class="col s12"><h5>Al momento non &eacute; possibile inoltrare le richieste. Ci scusiamo per l'inconveniente. Riprovare in un secondo momento</h5></div>
+							<div class="col s12"><h5>Risultato Operazione<i class="material-icons prefix left">thumb_up</i></h5></div>
 						</div>
-					</div>
-					<div class="row" style="margin-right:0px;">
-						<a class="waves-effect waves-light btn blue darken-4 right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
-					</div>
-					<?php }
-				} else {?>
+						<div class="card-panel">
+							<div class="row">
+								<div class="col s12"><h6>Operazione eseguita con successo!</h6></div>
+							</div>
+						</div>
+						<div class="row" style="margin-right:0px;">
+							<a class="btn waves-effect waves-light deep-orange darken4 right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
+						</div>
+						<?php } else { ?>
+						<div class="row">
+							<div class="col s12"><h5>Errore<i class="material-icons left small">thumb_down</i></h5></div>
+						</div>
+						<div class="card-panel">
+							<div class="row">
+								<div class="col s12"><h6>Al momento non &eacute; possibile inoltrare le richieste. Ci scusiamo per l'inconveniente. Riprovare in un secondo momento</h6></div>
+							</div>
+						</div>
+						<div class="row" style="margin-right:0px;">
+							<a class="btn waves-effect waves-light deep-orange darken4 right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
+						</div>
+						<?php }	
+					} 
+			} else {?>
 					<div class="row">
 							<div class="col s12"><h5>Invia gratuitamente una richiesta<i class="material-icons prefix left">send</i></h5></div>
 					</div>
@@ -89,7 +104,7 @@ $controller = new Controller();
 						<div class="row">
 							<div class="input-field col s12 m6 l6">
 								<i class="material-icons prefix">mail</i>
-								<input id="email" name="email" type="email" class="validate">
+								<input id="email" name="email" type="email" class="validate" required>
 								<label for="email" data-error="Email non corretta" data-success="OK">Email</label>
 							</div>
 							<div class="input-field col s12 m6 l6">
@@ -124,7 +139,7 @@ $controller = new Controller();
 						<div class="row">
 							<div class="file-field input-field col s12 m12 l12">
 							<i class="material-icons prefix">attach_file</i>
-								<div class="btn right" style="margin-left:10px">
+								<div class="btn right deep-orange darken-1" style="margin-left:10px">
 									<span>File</span>
 									<input type="file">
 								</div>
@@ -136,15 +151,18 @@ $controller = new Controller();
 						<div class="row">
 							<div class="input-field col s12 m12 l12">
 								<div style="align:center;display:inline-table" class="g-recaptcha" data-sitekey="<?php echo RC_SECRET_SITE; ?>" data-size="compact"></div>
-								<button style="margin-top:25px;" class="btn waves-effect waves-light blue darken-4 right" type="submit" name="register_button">Invia
+								<button style="margin-top:25px;" class="btn waves-effect waves-light deep-orange darken-4 right" type="submit" name="register_button">Invia
 									<i class="material-icons">send</i>
 								</button>
 							</div>
 						</div>
 					</form>
 					</div>
+				
+	<?php } ?>
 				</div>
-	<?php } include 'footer.php'; ?>
+	
+	<?php include 'footer.php'; ?>
 
 	<script>
 	$(document).ready(function() {

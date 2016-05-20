@@ -1,3 +1,4 @@
+<?php include_once("analyticstracking.php") ?>
 <div class="navbar-fixed">
 	<nav>
 		<div class="nav-wrapper">
@@ -9,17 +10,15 @@
 				<li><a href="send.php"><i class="material-icons right">send</i>Invia Richiesta</a></li>
 				<li><a href="who.php">Chi Siamo</a></li>
 				<li><a href="service.php">Servizi</a></li>
-				<li><a href="cons.php">Consigli Utili</a></li>
 				<li><a href="contact.php">Contatti</a></li>
 			</ul>
 			<ul class="side-nav" id="mobile-demo">
 		        <li><a class="waves-effect waves-light" href="index.php"><img class="header-img right" style="margin-top: 15px;" src="public/img/logo_black_pic.png">Home</a></li>
 		        <li class="divider"></li>
-		        <li><a class="waves-effect waves-light" href="send.php"><i class="material-icons right">send</i>Invia Richiesta</a></li>
 				<li><a class="waves-effect waves-light" href="who.php"><i class="material-icons right">perm_identity</i>Chi Siamo</a></li>
 		        <li><a class="waves-effect waves-light" href="service.php"><i class="material-icons right">room_service</i>Servizi</a></li>
-		        <li><a class="waves-effect waves-light" href="cons.php"><i class="material-icons right">info_outline</i>Consigli Utili</a></li>
 		        <li><a class="waves-effect waves-light" href="contact.php"><i class="material-icons right">contacts</i>Contatti</a></li>
+		        <li><a class="waves-effect waves-light" href="send.php"><i class="material-icons right">send</i>Invia Richiesta</a></li>
 		    </ul>
 		</div>
 	</nav>
