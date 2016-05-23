@@ -1,6 +1,7 @@
 <?php
 function getDirs() {
 	$dirs = array(
+			"model" =>  __DIR__ . '/model/MailResponse.php',
 			"controller" =>  __DIR__ . '/controller/controller.php',
 			"phpmailer" =>  __DIR__ . '/library/phpmailer/class.phpmailer.php',
 			"recaptcha" =>  __DIR__ . '/library/recaptcha/autoload.php',

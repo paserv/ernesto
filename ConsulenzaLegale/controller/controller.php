@@ -16,16 +16,53 @@ class Controller {
 		$email -> FromName = $nome;
 		$email -> Subject = $nome . ' - Motivazione: ' . $motivazione;
 		$email -> Body = 'Nominativo: ' . $nome . '\nMail: ' . $mail . '\nTelefono: ' . $telefono . '\nMotivazione: ' . $motivazione . '\nData ricevuta notifica atto: ' . $dataNotifica . '\nVarie ed Eventuali: ' . $varie;
+		$email -> AddAddress(DESTINATION_MAIL);
+		
 		if (!empty($attachment)) {
-			$file_to_attach = $attachment;
-			$email -> AddAttachment( $file_to_attach , 'NameOfFile.pdf' );
+			$fileVerificationResponse = validateFile($attachment);
+			if ($fileVerificationResponse == 'ok') {
+				$file_to_attach = $attachment;
+				$email -> AddAttachment( $file_to_attach , 'NameOfFile.pdf' );
+			} else {
+				return new MailResponse('fve', $fileVerificationResponse);
+			}
+			
 		}
 
-		$email -> AddAddress(DESTINATION_MAIL);
+		$esito = $email->Send();
 
-		return $email->Send();
+		if (!$esito) {
+			return new MailResponse('sme', 'Mail Error');
+		}
+		return new MailResponse('ok', '');;
 	}
 	
+	function validateFile($file) {
+		//Get the uploaded file information
+		$name_of_uploaded_file = basename($file['name']);
+		//get the file extension of the file
+		$type_of_uploaded_file = substr($name_of_uploaded_file,	strrpos($name_of_uploaded_file, '.') + 1);
+		$size_of_uploaded_file = $file["size"]/1024;//size in KBs
+		
+		//Validations
+		if($size_of_uploaded_file > MAX_ALLOWED_FILE_SIZE ) {
+			return 'Size of file should be less than $max_allowed_file_size';
+		}
+		
+		$allowed_extensions = explode(",", ALLOWED_FILE_EXTENSIONS);
+		$allowed_ext = false;
+		for($i=0; $i<sizeof($allowed_extensions); $i++) {
+			if(strcasecmp($allowed_extensions[$i],$type_of_uploaded_file) == 0) {
+				$allowed_ext = true;
+			}
+		}
+		
+		if(!$allowed_ext) {
+			return 'The uploaded file is not supported file type. Only the following file types are supported: ' . ALLOWED_FILE_EXTENSIONS;
+		}
+		
+		return 'ok';
+	}
 	/**
 	 * CAPTCHA CONTROLS
 	 */
