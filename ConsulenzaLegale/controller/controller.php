@@ -22,8 +22,8 @@ class Controller {
 		if (!empty($attachment)) {
 			$fileVerificationResponse = $this->validateFile($attachment);
 			if ($fileVerificationResponse == 'ok') {
-				$file_to_attach = $attachment;
-				$email -> AddAttachment( $file_to_attach , 'NameOfFile.pdf' );
+				$file_to_attach = $attachment['tmp_name'];
+				$email -> AddAttachment( $file_to_attach , basename($attachment['name']) );
 			} else {
 				return new MailResponse('ko', 'fve', $fileVerificationResponse);
 			}

@@ -52,7 +52,7 @@ $controller = new Controller();
 		if (isset($_POST['g-recaptcha-response'])) {
 			$isRobot = $controller->checkIsRobot($_POST['g-recaptcha-response']);
 			if (!$isRobot) {
-				$mailResponse = $controller->sendMail($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_POST['file']);
+				$mailResponse = $controller->sendMail($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_FILES['file']);//'C:\test.log');
 			}
 		}
 		
@@ -67,7 +67,7 @@ $controller = new Controller();
 							</div>
 					</div>
 					<div class="card-panel">
-					<form class="col s12" name="requestForm" action="send.php" method="post">
+					<form class="col s12" name="requestForm" action="send.php" method="post" enctype="multipart/form-data">
 						<div class="row">
 							<div class="input-field col s12 m12 l12">
 								<i class="material-icons prefix">account_circle</i>
@@ -115,11 +115,11 @@ $controller = new Controller();
 								<i class="material-icons prefix">attach_file</i>
 								<div class="btn right deep-orange darken-1" style="margin-left:10px">
 									<span>File</span>
-									<input type="file">
+									<input type="file" id="file" name="file">
 								</div>
 								<div class="file-path-wrapper">
 									<?php if ($mailResponse!= 'notset' and $mailResponse->type == 'fve') echo '<p class="red-text" style="margin-left:20px">' . $mailResponse->description . '</p>'; ?>
-									<input id="file" name="file" value="<?php if (isset($_POST ["file"])) echo ($_POST ["file"]);?>" class="file-path validate" style="margin-left:35px" type="text" placeholder="Allega file verbale o archivio .zip">
+									<input id="file_wrap" name="file_wrap" value="<?php if (isset($_POST ["file"])) echo ($_POST ["file"]);?>" class="file-path validate" style="margin-left:35px" type="text" placeholder="Allega file verbale o archivio .zip">
 								</div>
 							</div>
 						</div>
