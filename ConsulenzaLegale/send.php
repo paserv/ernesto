@@ -48,15 +48,18 @@ $controller = new Controller();
 	<div class="container">
 	<?php
 		$isRobot = false;
-		$mailResponse = 'notset';
+		$mailResponse = new MailResponse('notset', '', '');
 		if (isset($_POST['g-recaptcha-response'])) {
 			$isRobot = $controller->checkIsRobot($_POST['g-recaptcha-response']);
 			if (!$isRobot) {
-				$mailResponse = $controller->sendMail($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_FILES['file']);
+				$mailResponse = $controller->sendMail($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_POST['file']);
 			}
 		}
 		
-		if ($mailResponse == 'notset' or $mailResponse->response == 'fve') { ?>
+		if ($mailResponse->response == 'notset' or $mailResponse->response == 'ko') { 
+					if ($mailResponse->type == 'sme') { ?>
+						<script>Materialize.toast('Servizio al momento non raggiungibile. Si prega di riprovare in un secondo momento', 10000);</script>
+					<?php } ?>
 					<div class="row">
 							<div class="col s12 m6 l6"><h5>Invia gratuitamente una richiesta<i class="material-icons prefix left">send</i></h5></div>
 							<div class="col s12 m6 l6">
@@ -115,7 +118,7 @@ $controller = new Controller();
 									<input type="file">
 								</div>
 								<div class="file-path-wrapper">
-									<?php if ($mailResponse!= 'notset' and $mailResponse->response == 'fve') echo $mailResponse->description; ?>
+									<?php if ($mailResponse!= 'notset' and $mailResponse->type == 'fve') echo '<p class="red-text" style="margin-left:20px">' . $mailResponse->description . '</p>'; ?>
 									<input id="file" name="file" value="<?php if (isset($_POST ["file"])) echo ($_POST ["file"]);?>" class="file-path validate" style="margin-left:35px" type="text" placeholder="Allega file verbale o archivio .zip">
 								</div>
 							</div>
@@ -131,7 +134,7 @@ $controller = new Controller();
 						</div>
 					</form>
 					</div>
-	<?php } else if ($mailResponse->response == 'ok') {	?>
+	<?php } else if ($mailResponse->response == 'ok') { ?>
 				<div class="row">
 					<div class="col s12"><h5>Risultato Operazione<i class="material-icons prefix left">thumb_up</i></h5></div>
 				</div>
@@ -142,18 +145,6 @@ $controller = new Controller();
 				</div>
 				<div class="row" style="margin-right:0px;">
 					<a class="btn waves-effect waves-light deep-orange darken-4 right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
-				</div>
-			<?php } else if ($mailResponse->response == 'sme')	{?> 
-			<div class="row">
-					<div class="col s12"><h5>Risultato Operazione<i class="material-icons prefix left">thumb_down</i></h5></div>
-				</div>
-				<div class="card-panel">
-					<div class="row">
-						<div class="col s12"><h5>Impossibile recapitare la mail. Riprovare in un secondo momento</h5></div>
-					</div>
-				</div>
-				<div class="row" style="margin-right:0px;">
-					<a class="btn waves-effect waves-light deep-orange darken-4 right" href="send.php"><i class="material-icons right">backspace</i>Riprova</a>
 				</div>
 			<?php } ?>
 	</div>

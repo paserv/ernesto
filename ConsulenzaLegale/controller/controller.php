@@ -4,6 +4,7 @@ class Controller {
 	 * MAIL CONTROLS
 	 */
 	function sendMail($name, $mail, $phone, $motiv, $date, $misc, $attachment) {
+		
 		$email = new PHPMailer();
 		$nome = !empty($name) ? $name : 'Nessun nome specificato';
 		//$mail_ = !empty($mail) ? $mail : 'Nessuna email specificata';
@@ -19,12 +20,12 @@ class Controller {
 		$email -> AddAddress(DESTINATION_MAIL);
 		
 		if (!empty($attachment)) {
-			$fileVerificationResponse = validateFile($attachment);
+			$fileVerificationResponse = $this->validateFile($attachment);
 			if ($fileVerificationResponse == 'ok') {
 				$file_to_attach = $attachment;
 				$email -> AddAttachment( $file_to_attach , 'NameOfFile.pdf' );
 			} else {
-				return new MailResponse('fve', $fileVerificationResponse);
+				return new MailResponse('ko', 'fve', $fileVerificationResponse);
 			}
 			
 		}
@@ -32,9 +33,9 @@ class Controller {
 		$esito = $email->Send();
 
 		if (!$esito) {
-			return new MailResponse('sme', 'Mail Error');
+			return new MailResponse('ko', 'sme', 'Mail Error');
 		}
-		return new MailResponse('ok', '');;
+		return new MailResponse('ok', 'ok', 'Mail Sent');
 	}
 	
 	function validateFile($file) {
@@ -46,7 +47,7 @@ class Controller {
 		
 		//Validations
 		if($size_of_uploaded_file > MAX_ALLOWED_FILE_SIZE ) {
-			return 'Size of file should be less than $max_allowed_file_size';
+			return 'Il file deve essere minore di ' . MAX_ALLOWED_FILE_SIZE . ' KB';
 		}
 		
 		$allowed_extensions = explode(",", ALLOWED_FILE_EXTENSIONS);
@@ -58,7 +59,7 @@ class Controller {
 		}
 		
 		if(!$allowed_ext) {
-			return 'The uploaded file is not supported file type. Only the following file types are supported: ' . ALLOWED_FILE_EXTENSIONS;
+			return 'Il file deve avere una delle seguenti estensioni: ' . ALLOWED_FILE_EXTENSIONS;
 		}
 		
 		return 'ok';
