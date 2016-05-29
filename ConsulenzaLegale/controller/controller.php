@@ -6,6 +6,7 @@ class Controller {
 	function sendMail($name, $mail, $phone, $motiv, $date, $misc, $attachment) {
 		
 		$email = new PHPMailer();
+		$email->isHTML(true);
 		$nome = !empty($name) ? $name : 'Nessun nome specificato';
 		//$mail_ = !empty($mail) ? $mail : 'Nessuna email specificata';
 		$telefono = !empty($phone) ? $phone : 'Nessun telefono specificato';
@@ -16,7 +17,7 @@ class Controller {
 		$email -> From = $mail;
 		$email -> FromName = $nome;
 		$email -> Subject = $nome . ' - Motivazione: ' . $motivazione;
-		$email -> Body = 'Nominativo: ' . $nome . '\nMail: ' . $mail . '\nTelefono: ' . $telefono . '\nMotivazione: ' . $motivazione . '\nData ricevuta notifica atto: ' . $dataNotifica . '\nVarie ed Eventuali: ' . $varie;
+		$email -> Body = '<html><body><p>Nominativo: ' . $nome . '</p><p>Mail: ' . $mail . '</p><p>Telefono: ' . $telefono . '</p><p>Motivazione: ' . $motivazione . '</p><p>Data ricevuta notifica atto: ' . $dataNotifica . '</p><p>Varie ed Eventuali: ' . $varie . '</p></body></html>';
 		$email -> AddAddress(DESTINATION_MAIL);
 		
 		if (!empty($attachment)) {

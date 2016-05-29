@@ -1,6 +1,6 @@
 <?php
 #MAIL FORM CONFIG
-define ( 'DESTINATION_MAIL', 'consulenzamarzano@gmail.com' );
+define ( 'DESTINATION_MAIL', 'info@ricorsicodicedellastrada.it' );
 define ( 'MAX_ALLOWED_FILE_SIZE', 2048 );// size in KB
 define ( 'ALLOWED_FILE_EXTENSIONS', "jpg,jpeg,gif,bmp,doc,docx,zip,pdf,txt");
 
