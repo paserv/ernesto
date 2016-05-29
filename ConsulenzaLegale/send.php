@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php 
 require_once 'autoload.php';
 autoload();
 $controller = new Controller();

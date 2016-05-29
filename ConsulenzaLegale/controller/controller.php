@@ -69,9 +69,10 @@ class Controller {
 	 */
 	function checkIsRobot($recaptcha_response) {
 		//$recaptcha = new \ReCaptcha\ReCaptcha(RC_SECRET_KEY);
-		$recaptcha = new \ReCaptcha\ReCaptcha(RC_SECRET_KEY, new \ReCaptcha\RequestMethod\Curl());
+		$recaptcha = new \ReCaptcha\ReCaptcha(RC_SECRET_KEY, new \ReCaptcha\RequestMethod\Post());
 		$resp = $recaptcha->verify($recaptcha_response, $_SERVER['REMOTE_ADDR']);
-		// 		echo var_export($resp);
+// 		echo var_export($recaptcha_response);
+// 		echo var_export($resp);
 		if ($resp->isSuccess()) {
 			return false;
 		} else {

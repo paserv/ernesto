@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php 
 require_once 'autoload.php';
 autoload();
 ?>
@@ -45,11 +45,11 @@ autoload();
 	<?php include 'header.php' ?>
 	<div class="container" style="width: 90%;margin-bottom: 100">
 		<div class="row">
-			<div class="col s12 center"><a href="send.php"><img src="public/img/logo.png"></a></div>
+			<div class="col s12 center"><a href="send.php"><img src="public/img/logo.png" height="150"></a></div>
 			<div class="col s12 center"><h3 class="deep-orange-text text-darken-4">Ricorso Verbali C.d.S.</h3></div>
 			<div class="col s12 center"><h5 class="deep-orange-text text-darken-3">Richiedi un parere GRATUITO!!!</h5></div>
 		</div>
-		<div class="row" style="margin-top:100px">
+		<div class="row" style="margin-top:50px">
 			<div class="col s6 m3 l3 center">
 				<a href="who.php"><img alt="Chi Siamo" src="public/img/who.png"></a>
 				<a href="who.php"><h5 class="deep-orange-text text-darken-4">Chi Siamo</h5></a>
