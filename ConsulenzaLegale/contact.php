@@ -43,6 +43,7 @@ autoload();
 	
 	<body>
 	<?php include 'header.php' ?>
+	<main>
 	<div class="container" style="width: 90%;margin-bottom: 100">
 		<div class="row">
 			<div class="col s12"><h5>Contatti<i class="material-icons prefix left">bookmark_border</i></i></h5></div>
@@ -51,6 +52,7 @@ autoload();
 			CONTENUTO
 		</div>
 	</div>
+	</main>
 	<?php include 'footer.php'; ?>
 
 	</body>

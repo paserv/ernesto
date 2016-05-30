@@ -45,6 +45,7 @@ $controller = new Controller();
 	
 	<body>
 	<?php include 'header.php' ?>
+	<main>
 	<div class="container">
 	<?php
 		$isRobot = false;
@@ -148,6 +149,7 @@ $controller = new Controller();
 				</div>
 			<?php } ?>
 	</div>
+	</main>
 	<?php include 'footer.php'; ?>
 
 	<script>

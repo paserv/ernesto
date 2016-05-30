@@ -43,6 +43,7 @@ autoload();
 	
 	<body>
 	<?php include 'header.php' ?>
+	<main>
 	<div class="container" style="width: 90%;margin-bottom: 100">
 		<div class="row">
 			<div class="col s12 center"><a href="send.php"><img src="public/img/logo.png" height="150"></a></div>
@@ -68,6 +69,7 @@ autoload();
 			</div>
 		</div>
 	</div>
+	</main>
 	<?php include 'footer.php'; ?>
 
 	</body>

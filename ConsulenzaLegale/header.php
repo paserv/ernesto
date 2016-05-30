@@ -1,3 +1,4 @@
+<header>
 <?php include_once("analyticstracking.php") ?>
 <div class="navbar-fixed">
 	<nav>
@@ -28,3 +29,4 @@ $(document).ready(function(){
 	$(".button-collapse").sideNav();
 });
 </script>
+</header>
