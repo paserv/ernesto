@@ -32,7 +32,7 @@ autoload();
 			<meta name="theme-color" content="#ffffff">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 			<meta property="og:title" content="Ricorso Verbali C.d.S.">
-			<meta property="og:image" content="http://www.example.com/public/img/logo.png"> <!-- TODO Modificare -->
+			<meta property="og:image" content="http://www.ricorsicodicedellastrada.com/public/img/logo.png">
 			<meta property="og:site_name" content="Ricorso Verbali C.d.S.">
 			<meta property="og:description" content="Ricorso Verbali C.d.S. - Richiedi un parere GRATUITO!!!">
 			<meta property="og:locale" content="it_IT">
