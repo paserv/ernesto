@@ -1,3 +1,8 @@
+<?php 
+require_once 'autoload.php';
+autoload();
+$controller = new AdminController();
+?>
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -42,18 +47,27 @@
 	<main>
 	<div class="container" style="width: 90%;margin-bottom: 100">
 		<?php
-		if (isset($_POST['username']) && isset($_POST['password']) && $_POST['username']=='admin' && $_POST['password'] == 'Lasannotutti123') {
+		if (isset($_POST['username']) && isset($_POST['password']) && $controller->areValidCredential($_POST['username'], $_POST['password'])) {
 		?>
 		<div class="row">
-			<div class="col s12"><h5>Opzioni Disponibili<i class="material-icons prefix left">bookmark_border</i></i></h5></div>
+			<div class="col s12"><h5>Opzioni Disponibili<i class="material-icons prefix left">lock_open</i></i></h5></div>
 		</div>
 		<div class="card-panel">
 		</div>
-		<?php } else {?>
 		<div class="row">
-			<div class="col s12"><h5>Login<i class="material-icons prefix left">bookmark_border</i></i></h5></div>
+			<div class="input-field col s12 m12 l12">
+				<form>
+					<button style="margin-top:25px;" class="btn waves-effect waves-light deep-orange darken-4 right" type="submit" name="register_button">Exit
+					<i class="material-icons">exit_to_app</i>
+					</button>
+				</form>
+			</div>
 		</div>
-		<form class="col s12" name="requestForm" action="index.php" method="post">
+		<?php } else { ?>
+		<div class="row">
+			<div class="col s12"><h5>Login<i class="material-icons prefix left">lock_outline</i></i></h5></div>
+		</div>
+		<form class="col s12" name="loginForm" action="index.php" method="post">
 			<div class="card-panel">
 				<div class="row">
 					<div class="input-field col s12 m12 l12">
