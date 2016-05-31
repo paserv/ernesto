@@ -46,26 +46,26 @@ autoload();
 	<main>
 	<div class="container" style="width: 90%;margin-bottom: 100">
 		<div class="row">
-			<div class="col s12 center"><a href="send.php"><img src="public/img/logo.png" height="150"></a></div>
-			<div class="col s12 center"><h3 class="deep-orange-text text-darken-4">Ricorso Verbali C.d.S.</h3></div>
-			<div class="col s12 center"><h5 class="deep-orange-text text-darken-3">Richiedi un parere GRATUITO!!!</h5></div>
+			<div class="col s12 center"><a href="send.php"><img src="public/img/logo.png" height="200"></a></div>
+			<div class="col s12 center"><h3 class="golden-text">Ricorso Verbali C.d.S.</h3></div>
+			<div class="col s12 center"><h5 class="blu-text">Richiedi un parere GRATUITO!!!</h5></div>
 		</div>
 		<div class="row" style="margin-top:50px">
 			<div class="col s6 m3 l3 center">
 				<a href="who.php"><img alt="Chi Siamo" src="public/img/who.png"></a>
-				<a href="who.php"><h5 class="deep-orange-text text-darken-4">Chi Siamo</h5></a>
+				<a href="who.php"><h5 class="blu-text">Chi Siamo</h5></a>
 			</div>
 			<div class="col s6 m3 l3 center">
 				<a href="service.php"><img alt="Servizi" src="public/img/service.png"></a>
-				<a href="service.php"><h5 class="deep-orange-text text-darken-4">Servizi</h5></a>
+				<a href="service.php"><h5 class="blu-text">Servizi</h5></a>
 			</div>
 			<div class="col s6 m3 l3 center">
 				<a href="contact.php"><img alt="Contatti" src="public/img/contact.png">
-				<a href="contact.php"><h5 class="deep-orange-text text-darken-4">Contatti</h5></a>
+				<a href="contact.php"><h5 class="blu-text">Contatti</h5></a>
 			</div>
 			<div class="col s6 m3 l3 center">
 				<a href="send.php"><img alt="Invia Richiesta" src="public/img/send.png"></a>
-				<a href="send.php"><h5 class="deep-orange-text text-darken-4">Invia Richiesta</h5></a>
+				<a href="send.php"><h5 class="blu-text">Invia Richiesta</h5></a>
 			</div>
 		</div>
 	</div>

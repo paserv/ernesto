@@ -64,7 +64,7 @@ $controller = new Controller();
 					<div class="row">
 							<div class="col s12 m6 l6"><h5>Invia gratuitamente una richiesta<i class="material-icons prefix left">send</i></h5></div>
 							<div class="col s12 m6 l6">
-								<a href="send.php" class="waves-effect waves-light btn deep-orange darken-4 right" style="margin-top:10px"><i class="material-icons left">cached</i>reset fields</a>
+								<a href="send.php" class="waves-effect waves-light btn blu-background right" style="margin-top:10px"><i class="material-icons left">cached</i>reset fields</a>
 							</div>
 					</div>
 					<div class="card-panel">
@@ -114,7 +114,7 @@ $controller = new Controller();
 						<div class="row">
 							<div class="file-field input-field col s12 m12 l12">
 								<i class="material-icons prefix">attach_file</i>
-								<div class="btn right deep-orange darken-1" style="margin-left:10px">
+								<div class="btn right blu-background" style="margin-left:10px">
 									<span>File</span>
 									<input type="file" id="file" name="file">
 								</div>
@@ -128,7 +128,7 @@ $controller = new Controller();
 							<div class="input-field col s12 m12 l12">
 								<?php if($isRobot) { echo('<p class="red-text">Dimostra di non essere un robot</p>');}?>
 								<div style="align:center;display:inline-table" class="g-recaptcha" data-sitekey="<?php echo RC_SECRET_SITE; ?>" data-size="compact"></div>
-								<button style="margin-top:25px;" class="btn waves-effect waves-light deep-orange darken-4 right" type="submit" name="register_button">Invia
+								<button style="margin-top:25px;" class="btn waves-effect waves-light blu-background right" type="submit" name="register_button">Invia
 									<i class="material-icons">send</i>
 								</button>
 							</div>
@@ -145,7 +145,7 @@ $controller = new Controller();
 					</div>
 				</div>
 				<div class="row" style="margin-right:0px;">
-					<a class="btn waves-effect waves-light deep-orange darken-4 right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
+					<a class="btn waves-effect waves-light blu-background right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
 				</div>
 			<?php } ?>
 	</div>

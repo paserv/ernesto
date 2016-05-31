@@ -44,3 +44,15 @@ main {
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
+.golden-text {
+	color: #9D8E6D;
+}
+
+.blu-text {
+    color: #2A5EA0;
+}
+
+.blu-background {
+    background-color: #2A5EA0;
+}

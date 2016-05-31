@@ -2,7 +2,7 @@
 <?php include_once("analyticstracking.php") ?>
 <div class="navbar-fixed">
 	<nav>
-		<div class="nav-wrapper">
+		<div class="nav-wrapper" style="background-color: #2A5EA0">
 			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 			<ul class="left hide-on-med-and-down">
 				<li><a class="tooltipped" data-position="bottom" data-delay="100" data-tooltip="Home Page" href="index.php" ><img src="public/img/logo_white_pic.png"></a></li>

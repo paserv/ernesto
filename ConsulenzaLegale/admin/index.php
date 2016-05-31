@@ -53,11 +53,21 @@ $controller = new AdminController();
 			<div class="col s12"><h5>Opzioni Disponibili<i class="material-icons prefix left">lock_open</i></i></h5></div>
 		</div>
 		<div class="card-panel">
+		<div class="row center" style="margin-top:50px">
+			<div class="col s12 m6 l6 center">
+				<a href="properties.php"><i class="material-icons" style="font-size:90px">vpn_key</i></a>
+				<a href="properties.php"><h5 class="deep-orange-text text-darken-4">Modifica le propriet&agrave; del sito</h5></a>
+			</div>
+			<div class="col s12 m6 l6 center">
+				<a href="content.php"><img alt="Contenuti" src="../public/img/content.png"></a>
+				<a href="content.php"><h5 class="deep-orange-text text-darken-4">Modifica i contenuti del sito</h5></a>
+			</div>
+		</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12 m12 l12">
-				<form>
-					<button style="margin-top:25px;" class="btn waves-effect waves-light deep-orange darken-4 right" type="submit" name="register_button">Exit
+				<form class="col s12" name="loginForm" action="index.php" method="post">
+					<button style="margin-top:25px;background-color:#2A5EA0" class="btn waves-effect waves-light right" type="submit" name="register_button">Exit
 					<i class="material-icons">exit_to_app</i>
 					</button>
 				</form>
@@ -86,7 +96,7 @@ $controller = new AdminController();
 			</div>
 			<div class="row">
 				<div class="input-field col s12 m12 l12">
-					<button style="margin-top:25px;" class="btn waves-effect waves-light deep-orange darken-4 right" type="submit" name="register_button">Log In
+					<button style="margin-top:25px;background-color:#2A5EA0" class="btn waves-effect waves-light right" type="submit" name="register_button">Log In
 						<i class="material-icons">build</i>
 					</button>
 				</div>
