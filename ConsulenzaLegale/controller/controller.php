@@ -20,7 +20,7 @@ class Controller {
 		$email -> Body = '<html><body><p>Nominativo: ' . $nome . '</p><p>Mail: ' . $mail . '</p><p>Telefono: ' . $telefono . '</p><p>Motivazione: ' . $motivazione . '</p><p>Data ricevuta notifica atto: ' . $dataNotifica . '</p><p>Varie ed Eventuali: ' . $varie . '</p></body></html>';
 		$email -> AddAddress(DESTINATION_MAIL);
 		
-		if (!empty($attachment)) {
+		if (strlen($attachment['name']) > 0) {
 			$fileVerificationResponse = $this->validateFile($attachment);
 			if ($fileVerificationResponse == 'ok') {
 				$file_to_attach = $attachment['tmp_name'];
@@ -73,8 +73,8 @@ class Controller {
 		$recaptcha = new \ReCaptcha\ReCaptcha(RC_SECRET_KEY, new \ReCaptcha\RequestMethod\Post());
 // 		$recaptcha = new \ReCaptcha\ReCaptcha(RC_SECRET_KEY, new \ReCaptcha\RequestMethod\Curl());
 		$resp = $recaptcha->verify($recaptcha_response, $_SERVER['REMOTE_ADDR']);
- 		echo var_export($recaptcha_response);
- 		echo var_export($resp);
+//  		echo var_export($recaptcha_response);
+//  		echo var_export($resp);
 		if ($resp->isSuccess()) {
 			return false;
 		} else {
