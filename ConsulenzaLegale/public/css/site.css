@@ -45,14 +45,39 @@ main {
   font-feature-settings: 'liga';
 }
 
-.golden-text {
+.golden {
 	color: #9D8E6D;
 }
 
-.blu-text {
+.blu {
     color: #2A5EA0;
 }
 
-.blu-background {
+.style-header {
+	background-color: #2A5EA0;
+}
+
+.style-footer {
+    background-color: #4F81BD !important;
+}
+
+.style-footer-copyright {
+    background-color: #2A5EA0 !important;
+    padding: 0 20px 0 20px;
+}
+
+.button {
+    background-color: #9D8E6D;
+}
+
+.button:hover {
     background-color: #2A5EA0;
+}
+
+.big-icon {
+	font-size:90px;
+}
+
+.med-icon {
+    font-size:45px;
 }

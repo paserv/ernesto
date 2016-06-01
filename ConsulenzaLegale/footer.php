@@ -1,5 +1,5 @@
-<footer class="page-footer" style="background-color: #4F81BD">
-	<div class="footer-copyright container-footer" style="padding:0 20px 0 20px;background-color: #2A5EA0">
+<footer class="page-footer style-footer">
+	<div class="footer-copyright container-footer style-footer-copyright">
 			<div class="blue-text text-lighten-4 right"><h5>Ricorso Verbali C.d.S.</h5></div>
 		</div>
 </footer>

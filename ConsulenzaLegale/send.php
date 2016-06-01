@@ -11,25 +11,22 @@ $controller = new Controller();
 			<link type="text/css" rel="stylesheet" href="public/css/materialize.min.css"  media="screen,projection"/>
 			<link type="text/css" rel="stylesheet" href="public/css/jquery-ui.css">
 			<link type="text/css" rel="stylesheet" href="public/css/site.css" />
-			<link rel="apple-touch-icon" sizes="57x57" href="public/icons/apple-touch-icon-57x57.png">
-			<link rel="apple-touch-icon" sizes="60x60" href="public/icons/apple-touch-icon-60x60.png">
-			<link rel="apple-touch-icon" sizes="72x72" href="public/icons/apple-touch-icon-72x72.png">
-			<link rel="apple-touch-icon" sizes="76x76" href="public/icons/apple-touch-icon-76x76.png">
-			<link rel="apple-touch-icon" sizes="114x114" href="public/icons/apple-touch-icon-114x114.png">
-			<link rel="apple-touch-icon" sizes="120x120" href="public/icons/apple-touch-icon-120x120.png">
-			<link rel="apple-touch-icon" sizes="144x144" href="public/icons/apple-touch-icon-144x144.png">
-			<link rel="apple-touch-icon" sizes="152x152" href="public/icons/apple-touch-icon-152x152.png">
-			<link rel="apple-touch-icon" sizes="180x180" href="public/icons/apple-touch-icon-180x180.png">
-			<link rel="icon" type="image/png" href="public/icons/favicon-32x32.png" sizes="32x32">
-			<link rel="icon" type="image/png" href="public/icons/android-chrome-192x192.png" sizes="192x192">
-			<link rel="icon" type="image/png" href="public/icons/favicon-96x96.png" sizes="96x96">
-			<link rel="icon" type="image/png" href="public/icons/favicon-16x16.png" sizes="16x16">
-			<link rel="manifest" href="public/icons/manifest.json">
-			<link rel="mask-icon" href="public/icons/safari-pinned-tab.svg" color="#5bbad5">
-			<link rel="shortcut icon" href="public/icons/favicon.ico" type="image/x-icon">
-			<meta name="msapplication-TileColor" content="#da532c">
-			<meta name="msapplication-TileImage" content="public/icons/mstile-144x144.png">
-			<meta name="msapplication-config" content="public/icons/browserconfig.xml">
+			<link rel="apple-touch-icon" sizes="57x57" href="public/icons/apple-icon-57x57.png">
+			<link rel="apple-touch-icon" sizes="60x60" href="public/icons/apple-icon-60x60.png">
+			<link rel="apple-touch-icon" sizes="72x72" href="public/icons/apple-icon-72x72.png">
+			<link rel="apple-touch-icon" sizes="76x76" href="public/icons/apple-icon-76x76.png">
+			<link rel="apple-touch-icon" sizes="114x114" href="public/icons/apple-icon-114x114.png">
+			<link rel="apple-touch-icon" sizes="120x120" href="public/icons/apple-icon-120x120.png">
+			<link rel="apple-touch-icon" sizes="144x144" href="public/icons/apple-icon-144x144.png">
+			<link rel="apple-touch-icon" sizes="152x152" href="public/icons/apple-icon-152x152.png">
+			<link rel="apple-touch-icon" sizes="180x180" href="public/icons/apple-icon-180x180.png">
+			<link rel="icon" type="image/png" sizes="192x192"  href="public/icons/android-icon-192x192.png">
+			<link rel="icon" type="image/png" sizes="32x32" href="public/icons/favicon-32x32.png">
+			<link rel="icon" type="image/png" sizes="96x96" href="public/icons/favicon-96x96.png">
+			<link rel="icon" type="image/png" sizes="16x16" href="public/icons/favicon-16x16.png">
+			<link rel="manifest" href="/manifest.json">
+			<meta name="msapplication-TileColor" content="#ffffff">
+			<meta name="msapplication-TileImage" content="public/icons/ms-icon-144x144.png">
 			<meta name="theme-color" content="#ffffff">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 			<meta property="og:title" content="Ricorso Verbali C.d.S.">
@@ -62,35 +59,35 @@ $controller = new Controller();
 						<script>Materialize.toast('Servizio al momento non raggiungibile. Si prega di riprovare in un secondo momento', 10000);</script>
 					<?php } ?>
 					<div class="row">
-							<div class="col s12 m6 l6"><h5>Invia gratuitamente una richiesta<i class="material-icons prefix left">send</i></h5></div>
+							<div class="col s12 m6 l6 blu"><h5>Invia gratuitamente una richiesta<i class="material-icons prefix left golden">send</i></h5></div>
 							<div class="col s12 m6 l6">
-								<a href="send.php" class="waves-effect waves-light btn blu-background right" style="margin-top:10px"><i class="material-icons left">cached</i>reset fields</a>
+								<a href="send.php" class="waves-effect waves-light btn button right" style="margin-top:10px"><i class="material-icons left">cached</i>reset fields</a>
 							</div>
 					</div>
 					<div class="card-panel">
 					<form class="col s12" name="requestForm" action="send.php" method="post" enctype="multipart/form-data">
 						<div class="row">
 							<div class="input-field col s12 m12 l12">
-								<i class="material-icons prefix">account_circle</i>
+								<i class="material-icons prefix blu">account_circle</i>
 								<input id="name" name="name" value="<?php if (isset($_POST ["name"])) echo ($_POST ["name"]);?>" type="text" class="validate" required>
 								<label for="name" data-error="Nome non corretto" data-success="OK" class="<?php if (isset($_POST ["name"])) echo ('active');?>">Nome e Cognome*</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12 m6 l6">
-								<i class="material-icons prefix">mail</i>
+								<i class="material-icons prefix blu">mail</i>
 								<input id="email" name="email" value="<?php if (isset($_POST ["email"])) echo ($_POST ["email"]);?>" type="email" class="validate" required>
 								<label for="email" data-error="Email non corretta" data-success="OK" class="<?php if (isset($_POST ["email"])) echo ('active');?>">Email*</label>
 							</div>
 							<div class="input-field col s12 m6 l6">
-								<i class="material-icons prefix">phone</i>
+								<i class="material-icons prefix blu">phone</i>
 								<input id="phone" name="phone" value="<?php if (isset($_POST ["phone"])) echo ($_POST ["phone"]);?>" type="tel" class="validate">
 								<label for="phone" data-error="Numero telefonico non corretto" data-success="OK" class="<?php if (isset($_POST ["phone"])) echo ('active');?>">Telefono</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12 m6 l6">
-								<i class="material-icons prefix">help</i>
+								<i class="material-icons prefix blu">help</i>
 							    <select id="motivation" name="motivation">
 							      <option value="Richiesta Generica" <?php if (isset($_POST ["motivation"]) and ($_POST ["motivation"] =='Richiesta Generica')) echo ('selected');?>>Richiesta Generica</option>
 							      <option value="Verbale" <?php if (isset($_POST ["motivation"]) and ($_POST ["motivation"] == 'Verbale')) echo ('selected');?>>Verbale</option>
@@ -99,22 +96,22 @@ $controller = new Controller();
 							    <label>Motivazione</label>
 							</div>
 							<div class="input-field col s12 m6 l6">
-								<i class="material-icons prefix">date_range</i>
+								<i class="material-icons prefix blu">date_range</i>
 								<input id="date" name="date" value="<?php if (isset($_POST ["date"])) echo ($_POST ["date"]);?>" type="date" class="datepicker">
 								<label for="date" class="<?php if (isset($_POST ["date"])) echo ('active');?>">Data notifica atto</label>
 							</div>
 						</div>
 						<div class="row">
 						    <div class="input-field col s12 m12 l12 tooltipped" data-tooltip="Spiegaci il perche' del ricorso">
-								<i class="material-icons prefix">note_add</i>
+								<i class="material-icons prefix blu">note_add</i>
 								<textarea id="misc" name="misc"  class="materialize-textarea" maxlength="160"><?php if (isset($_POST ["misc"])) echo ($_POST ["misc"]);?></textarea>
 								<label for="misc" class="<?php if (isset($_POST ["misc"])) echo ('active');?>">Varie ed Eventuali</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="file-field input-field col s12 m12 l12">
-								<i class="material-icons prefix">attach_file</i>
-								<div class="btn right blu-background" style="margin-left:10px">
+								<i class="material-icons prefix blu">attach_file</i>
+								<div class="btn right button" style="margin-left:10px">
 									<span>File</span>
 									<input type="file" id="file" name="file">
 								</div>
@@ -128,7 +125,7 @@ $controller = new Controller();
 							<div class="input-field col s12 m12 l12">
 								<?php if($isRobot) { echo('<p class="red-text">Dimostra di non essere un robot</p>');}?>
 								<div style="align:center;display:inline-table" class="g-recaptcha" data-sitekey="<?php echo RC_SECRET_SITE; ?>" data-size="compact"></div>
-								<button style="margin-top:25px;" class="btn waves-effect waves-light blu-background right" type="submit" name="register_button">Invia
+								<button style="margin-top:25px;" class="btn waves-effect waves-light button right" type="submit" name="register_button">Invia
 									<i class="material-icons">send</i>
 								</button>
 							</div>
@@ -145,7 +142,7 @@ $controller = new Controller();
 					</div>
 				</div>
 				<div class="row" style="margin-right:0px;">
-					<a class="btn waves-effect waves-light blu-background right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
+					<a class="btn waves-effect waves-light button right" href="index.php"><i class="material-icons right">backspace</i>Torna alla Home</a>
 				</div>
 			<?php } ?>
 	</div>
