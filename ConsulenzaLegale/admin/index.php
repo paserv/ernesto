@@ -34,6 +34,7 @@ $controller = new AdminController();
 			<meta property="og:site_name" content="Ricorso Verbali C.d.S.">
 			<meta property="og:description" content="Ricorso Verbali C.d.S. - Richiedi un parere GRATUITO!!!">
 			<meta property="og:locale" content="it_IT">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 			<script type="text/javascript" src="../public/js/jquery-2.1.3.min.js"></script>
 			<script type="text/javascript" src="../public/js/jquery-ui-1.11.4.js"></script>
 			<script type="text/javascript" src="../public/js/materialize.min.js"></script>

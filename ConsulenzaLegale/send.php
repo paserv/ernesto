@@ -25,6 +25,8 @@ $controller = new Controller();
 			<link rel="icon" type="image/png" sizes="96x96" href="public/icons/favicon-96x96.png">
 			<link rel="icon" type="image/png" sizes="16x16" href="public/icons/favicon-16x16.png">
 			<link rel="manifest" href="/manifest.json">
+			<link rel="mask-icon" href="public/icons/safari-pinned-tab.svg" color="#5bbad5">
+			<link rel="shortcut icon" href="public/icons/favicon.ico" type="image/x-icon">
 			<meta name="msapplication-TileColor" content="#ffffff">
 			<meta name="msapplication-TileImage" content="public/icons/ms-icon-144x144.png">
 			<meta name="theme-color" content="#ffffff">
@@ -34,10 +36,10 @@ $controller = new Controller();
 			<meta property="og:site_name" content="Ricorso Verbali C.d.S.">
 			<meta property="og:description" content="Ricorso Verbali C.d.S. - Richiedi un parere GRATUITO!!!">
 			<meta property="og:locale" content="it_IT">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 			<script type="text/javascript" src="public/js/jquery-2.1.3.min.js"></script>
 			<script type="text/javascript" src="public/js/jquery-ui-1.11.4.js"></script>
 			<script type="text/javascript" src="public/js/materialize.min.js"></script>
-			<script src='https://www.google.com/recaptcha/api.js?hl=it'></script>
 		</head>
 	
 	<body>
@@ -49,7 +51,7 @@ $controller = new Controller();
 		$mailResponse = new MailResponse('notset', '', '');
 		if (isset($_POST['g-recaptcha-response'])) {
 			$isRobot = $controller->checkIsRobot($_POST['g-recaptcha-response']);
-			if (!$isRobot) {
+			if (true) {
 				$mailResponse = $controller->sendMail($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_FILES['file']);//'C:\test.log');
 			}
 		}
