@@ -40,6 +40,7 @@ $controller = new Controller();
 			<script type="text/javascript" src="public/js/jquery-2.1.3.min.js"></script>
 			<script type="text/javascript" src="public/js/jquery-ui-1.11.4.js"></script>
 			<script type="text/javascript" src="public/js/materialize.min.js"></script>
+			<script src='https://www.google.com/recaptcha/api.js?hl=it'></script>
 		</head>
 	
 	<body>
@@ -51,7 +52,7 @@ $controller = new Controller();
 		$mailResponse = new MailResponse('notset', '', '');
 		if (isset($_POST['g-recaptcha-response'])) {
 			$isRobot = $controller->checkIsRobot($_POST['g-recaptcha-response']);
-			if (true) {
+			if (!$isRobot) {
 				$mailResponse = $controller->sendMail($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['motivation'], $_POST['date'], $_POST['misc'], $_FILES['file']);//'C:\test.log');
 			}
 		}
