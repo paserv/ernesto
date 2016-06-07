@@ -9,7 +9,7 @@
 	<main>
 	<div class="container" style="width: 90%;margin-bottom: 100">
 		<div class="row">
-			<div class="col s12 blu"><h5>Servizi<i class="material-icons prefix left golden">bookmark_border</i></i></h5></div>
+			<div class="col s12 blu"><h5>Servizi<i class="material-icons prefix left golden med-icon">business</i></i></h5></div>
 		</div>
 		<div class="card-panel">
 		Il parere che viene reso circa la possibilit&agrave; e la sussistenza dei presupposti per la proposizione di un eventuale ricorso, si ribadisce, &egrave; <strong>TOTALMENTE GRATUITA!!!</strong><br><br>

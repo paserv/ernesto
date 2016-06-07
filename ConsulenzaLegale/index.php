@@ -7,28 +7,24 @@
 	<body>
 	<?php include 'header.php' ?>
 	<main>
-	<div class="container" style="width: 90%;margin-bottom: 100;margin-top:50">
+	<div class="container" style="width: 90%;margin-bottom: 100px;margin-top:50px">
 		<div class="row">
 			<div class="col s12 center"><a href="send.php"><img src="public/img/logo.png" height="200"></a></div>
-			<div class="col s12 center golden"><h3>Ricorso Verbali C.d.S.</h3></div>
+			<div class="col s12 center golden"><h3>Ricorsi & Controricorsi</h3></div>
 			<div class="col s12 center blu"><h5>Richiedi un parere GRATUITO!!!</h5></div>
 		</div>
 		<div class="row" style="margin-top:50px">
-			<div class="col s6 m3 l3 center">
-				<a href="who.php"><i class="material-icons big-icon golden">perm_identity</i></a>
-				<a href="who.php" class="blu"><h5>Chi Siamo</h5></a>
+			<div class="col s12 m4 l4 center">
+				<a href="send.php?req=cds"><i class="material-icons big-icon golden">directions_car</i></a>
+				<a href="send.php?req=cds" class="blu"><h5>Verbali codice della strada</h5></a>
 			</div>
-			<div class="col s6 m3 l3 center">
-				<a href="service.php"><i class="material-icons big-icon golden">business</i></a>
-				<a href="service.php" class="blu"><h5>Servizi</h5></a>
+			<div class="col s12 m4 l4 center">
+				<a href="send.php?req=ce"><i class="material-icons big-icon golden">folder_shared</i></a>
+				<a href="send.php?req=ce" class="blu"><h5>Cartelle Esattoriali</h5></a>
 			</div>
-			<div class="col s6 m3 l3 center">
-				<a href="contact.php"><i class="material-icons big-icon golden">contacts</i></a>
-				<a href="contact.php" class="blu"><h5>Contatti</h5></a>
-			</div>
-			<div class="col s6 m3 l3 center">
-				<a href="send.php"><i class="material-icons big-icon golden">send</i></a>
-				<a href="send.php" class="blu"><h5>Invia Richiesta</h5></a>
+			<div class="col s12 m4 l4 center">
+				<a href="send.php?req=st"><i class="material-icons big-icon golden">gavel</i></a>
+				<a href="send.php?req=st" class="blu"><h5>Sanzioni tributarie</h5></a>
 			</div>
 		</div>
 	</div>

@@ -28,7 +28,7 @@ $controller = new Controller();
 						<script>Materialize.toast('Servizio al momento non raggiungibile. Si prega di riprovare in un secondo momento', 10000);</script>
 					<?php } ?>
 					<div class="row">
-							<div class="col s12 m6 l6 blu"><h5>Invia gratuitamente una richiesta<i class="material-icons prefix left golden">send</i></h5></div>
+							<div class="col s12 m6 l6 blu"><h5>Invio gratuito richiesta<i class="material-icons prefix left golden">send</i></h5></div>
 							<div class="col s12 m6 l6">
 								<a href="send.php" class="waves-effect waves-light btn button right" style="margin-top:10px"><i class="material-icons left">cached</i>reset fields</a>
 							</div>
@@ -59,8 +59,9 @@ $controller = new Controller();
 								<i class="material-icons prefix blu">help</i>
 							    <select id="motivation" name="motivation">
 							      <option value="Richiesta Generica" <?php if (isset($_POST ["motivation"]) and ($_POST ["motivation"] =='Richiesta Generica')) echo ('selected');?>>Richiesta Generica</option>
-							      <option value="Verbale" <?php if (isset($_POST ["motivation"]) and ($_POST ["motivation"] == 'Verbale')) echo ('selected');?>>Verbale</option>
-							      <option value="Cartella Esattoriale" <?php if (isset($_POST ["motivation"]) and ($_POST ["motivation"] == 'Cartella Esattoriale')) echo ('selected');?>>Cartella Esattoriale</option>
+							      <option value="Verbale Codice della Strada" <?php if ( (isset($_POST ["motivation"]) and ($_POST ["motivation"] == 'Verbale Codice della Strada')) or (isset($_GET['req']) and $_GET['req'] == 'cds') ) echo ('selected');?>>Verbale Codice della Strada</option>
+							      <option value="Cartella Esattoriale" <?php if (isset($_POST ["motivation"]) and ($_POST ["motivation"] == 'Cartella Esattoriale') or (isset($_GET['req']) and $_GET['req'] == 'ce') ) echo ('selected');?>>Cartella Esattoriale</option>
+							      <option value="Sanzione Tributaria" <?php if (isset($_POST ["motivation"]) and ($_POST ["motivation"] == 'Sanzione Tributaria') or (isset($_GET['req']) and $_GET['req'] == 'st') ) echo ('selected');?>>Sanzione Tributaria</option>
 							    </select>
 							    <label>Motivazione</label>
 							</div>
@@ -91,14 +92,25 @@ $controller = new Controller();
 							</div>
 						</div>
 						<div class="row">
-							<div class="input-field col s12 m12 l12">
+							<div class="col s12 m6 l6 center">
+								<div class="card blue-grey lighten-5" style="margin-top:0px">
+									<div class="card-content">
+										<span class="card-title black-text">Termini e Condizioni</span>
+										<p>Sottomettendo il seguente form, si concorda sui seguenti <a href="terms.php">Termini e Condizioni</a></p>
+										<div class="row center" style="margin-top: 10px; margin-bottom: 0px;">
+											<input type="checkbox" id="acceptTerms" name="terms" class="validate" data-error="Accetta le condizioni" required/><label for="acceptTerms">Accetta</label></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="input-field col s12 m6 l6 center">
 								<?php if($isRobot) { echo('<p class="red-text">Dimostra di non essere un robot</p>');}?>
 								<div style="align:center;display:inline-table" class="g-recaptcha" data-sitekey="<?php echo RC_SECRET_SITE; ?>" data-size="compact"></div>
-								<button style="margin-top:25px;" class="btn waves-effect waves-light button right" type="submit" name="register_button">Invia
-									<i class="material-icons">send</i>
-								</button>
 							</div>
 						</div>
+						<button style="margin-top:30px;" class="btn waves-effect waves-light button right" type="submit" name="register_button">Invia
+							<i class="material-icons">send</i>
+						</button>
 					</form>
 					</div>
 	<?php } else if ($mailResponse->response == 'ok') { ?>

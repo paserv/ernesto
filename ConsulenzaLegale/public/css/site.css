@@ -80,4 +80,9 @@ main {
 
 .med-icon {
     font-size:45px;
+    margin-top: -10px;
+}
+
+.dropdown-content li>span {
+    color: #004080;
 }
