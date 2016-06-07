@@ -86,3 +86,8 @@ main {
 .dropdown-content li>span {
     color: #004080;
 }
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    left: auto;
+}

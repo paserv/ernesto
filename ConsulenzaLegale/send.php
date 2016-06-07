@@ -98,13 +98,13 @@ $controller = new Controller();
 										<span class="card-title black-text">Termini e Condizioni</span>
 										<p>Sottomettendo il seguente form, si concorda sui seguenti <a href="terms.php">Termini e Condizioni</a></p>
 										<div class="row center" style="margin-top: 10px; margin-bottom: 0px;">
-											<input type="checkbox" id="acceptTerms" name="terms" class="validate" data-error="Accetta le condizioni" required/><label for="acceptTerms">Accetta</label></p>
+											<input type="checkbox" id="acceptTerms" required name="terms"/><label for="acceptTerms">Accetta</label>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="input-field col s12 m6 l6 center">
-								<?php if($isRobot) { echo('<p class="red-text">Dimostra di non essere un robot</p>');}?>
+							<div class="input-field col s12 m6 l6 center" <?php if($isRobot) echo ' style="margin-top:0px"'?>">
+								<?php if($isRobot) { echo('<div class="red-text center" style="margin-top:0px">Dimostra di non essere un robot</div>');}?>
 								<div style="align:center;display:inline-table" class="g-recaptcha" data-sitekey="<?php echo RC_SECRET_SITE; ?>" data-size="compact"></div>
 							</div>
 						</div>
