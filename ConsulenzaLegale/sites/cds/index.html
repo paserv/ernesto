@@ -53,45 +53,16 @@
 				ga('send', 'pageview');
 			</script>
 			<div class="navbar-fixed">
-				<nav>
-					<div class="nav-wrapper style-header">
-						<a href="index.html" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-						<ul class="left hide-on-med-and-down">
-							<li><a class="tooltipped" data-position="bottom" data-delay="100" data-tooltip="Home Page" href="index.php" ><img src="public/img/logo_white_pic.png"></a></li>
-						</ul>
-						<ul class="right hide-on-med-and-down">
-							<li><a href="http://www.ricorsiecontroricorsi.it/who.php">Chi Siamo</a></li>
-							<li><a href="http://www.ricorsiecontroricorsi.it/service.php">Servizi</a></li>
-							<li><a href="http://www.ricorsiecontroricorsi.it/send.php">Contatti</a></li>
-							<li><a href="http://www.ricorsiecontroricorsi.it/send.php?req=cds">Invia Richiesta</a></li>
-						</ul>
-						<ul class="side-nav" id="mobile-menu">
-					        <li><a class="waves-effect waves-light" href="index.html"><img class="header-img right" style="margin-top: 15px;" src="public/img/logo_black_pic.png">Home</a></li>
-					        <li class="divider"></li>
-					        <li><a class="waves-effect waves-light" href="http://www.ricorsiecontroricorsi.it/who.php"><i class="material-icons right">perm_identity</i>Chi Siamo</a></li>
-					        <li><a class="waves-effect waves-light" href="http://www.ricorsiecontroricorsi.it/service.php"><i class="material-icons right">business</i>Servizi</a></li>
-					         <li><a class="waves-effect waves-light" href="http://www.ricorsiecontroricorsi.it/send.php"><i class="material-icons right">email</i>Contatti</a></li>
-					        <li><a class="waves-effect waves-light" href="http://www.ricorsiecontroricorsi.it/send.php?req=cds"><i class="material-icons right">send</i>Invia Richiesta</a></li>
-					    </ul>
-					</div>
+				<nav class="style-header">
 				</nav>
 			</div>
-			<script>
-				$(document).ready(function(){
-					$(".button-collapse").sideNav();
-					$(".dropdown-button").dropdown();
-					$('.collapsible').collapsible({
-					      accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-					    });
-				});
-			</script>
 		</header>
 		<main>
 			<div class="container" style="width: 90%;margin-bottom: 100px;margin-top:50px">
 				<div class="row">
 					<div class="col s12 center"><a href="http://www.ricorsiecontroricorsi.it/send.php?req=cds"><img src="public/img/logo.png" height="200"></a></div>
-					<div class="col s12 center golden"><h3>Ricorsi Codice della Strada</h3></div>
-					<div class="col s12 center blu"><h5>Richiedi un parere GRATUITO!!!</h5></div>
+					<div><h3><a class="col s12 center golden" style="margin-top:20px" href="http://www.ricorsiecontroricorsi.it/send.php?req=cds">Ricorsi Codice della Strada</a></h3></div>
+					<div><h5><a class="col s12 center blu" class="col s12 center golden" style="margin-top:20px" href="http://www.ricorsiecontroricorsi.it/send.php?req=cds">Richiedi un parere GRATUITO!!!</a></h5></div>
 				</div>
 			</div>
 		</main>
