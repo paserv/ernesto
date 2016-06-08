@@ -13,7 +13,7 @@
 		</div>
 		<div class="card-panel">
 		Il parere che viene reso circa la possibilit&agrave; e la sussistenza dei presupposti per la proposizione di un eventuale ricorso, si ribadisce, &egrave; <strong>TOTALMENTE GRATUITA!!!</strong><br><br>
-		Soltanto successivamente, Vi verr&agrave; inviato, da un Avvocato, da un Praticante Avvocato "Abilitato" o da un  Dottore in Giurisprudenza (a secondo delle facolt&agravce; dei giuristi e della complessit&agrave; del caso), un preventivo assolutamente <strong><u>NON VINCOLANTE</u></strong> con il quale potrete valutare di:
+		Soltanto successivamente, Vi verr&agrave; inviato, da un Avvocato, da un Praticante Avvocato "Abilitato" o da un  Dottore in Giurisprudenza (a secondo delle facolt&agrave; dei giuristi e della complessit&agrave; del caso), un preventivo assolutamente <strong><u>NON VINCOLANTE</u></strong> con il quale potrete valutare di:
 		<ol>
 			<li>Chiedere la redazione del ricorso;</li>
 			<li>Chiedere la redazione e la presentazione del ricorso;</li>

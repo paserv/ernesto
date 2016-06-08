@@ -96,7 +96,7 @@ $controller = new Controller();
 								<div class="card blue-grey lighten-5" style="margin-top:0px">
 									<div class="card-content">
 										<span class="card-title black-text">Termini e Condizioni</span>
-										<p>Sottomettendo il seguente form, si concorda sui seguenti <a href="terms.php">Termini e Condizioni</a></p>
+										<p>Sottomettendo il seguente form, si concorda sulla seguente <a href="//www.iubenda.com/privacy-policy/7859989" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></p>
 										<div class="row center" style="margin-top: 10px; margin-bottom: 0px;">
 											<input type="checkbox" id="acceptTerms" required name="terms"/><label for="acceptTerms">Accetta</label>
 										</div>

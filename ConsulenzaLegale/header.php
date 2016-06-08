@@ -10,7 +10,7 @@
 			<ul class="right hide-on-med-and-down">
 				<li><a href="who.php">Chi Siamo</a></li>
 				<li><a href="service.php">Servizi</a></li>
-				<li><a href="contact.php">Contatti</a></li>
+				<li><a href="send.php">Contatti</a></li>
 				<li><a class="dropdown-button" href="#!" data-activates="dropdownReq">Invia Richiesta<i class="material-icons right">arrow_drop_down</i></a></li>
 			</ul>
 			<ul class="side-nav" id="mobile-menu">
@@ -18,10 +18,10 @@
 		        <li class="divider"></li>
 		        <li><a class="waves-effect waves-light" href="who.php"><i class="material-icons right">perm_identity</i>Chi Siamo</a></li>
 		        <li><a class="waves-effect waves-light" href="service.php"><i class="material-icons right">business</i>Servizi</a></li>
-		        <li><a class="waves-effect waves-light" href="contact.php"><i class="material-icons right">email</i>Contatti</a></li>
+		        <li><a class="waves-effect waves-light" href="send.php"><i class="material-icons right">email</i>Contatti</a></li>
 				<ul class="collapsible" data-collapsible="accordion">
 					<li>
-      					<div class="collapsible-header black-text"><i class="material-icons right">send</i>Invia Richiesta</div>
+      					<div class="collapsible-header black-text"><i class="material-icons right">arrow_drop_down</i>Invia Richiesta</div>
       					<div class="collapsible-body black-text">
       						<a class="black-text" href="send.php?req=cds"><i class="material-icons right">directions_car</i>Verbale CdS</a>
       						<a class="black-text" href="send.php?req=ce"><i class="material-icons right">folder_shared</i>Cartella Esattoriale</a>
