@@ -1,6 +1,5 @@
 <?php
 require_once 'autoload.php';
-GeoLocation_autoload();
 
 class DBModel {
 	function getConnection() {

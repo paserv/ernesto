@@ -16,7 +16,7 @@
 		<div class="row" style="margin-top:50px">
 			<div class="col s12 m4 l4 center">
 				<a href="send.php?req=cds"><i class="material-icons big-icon golden">directions_car</i></a>
-				<a href="send.php?req=cds" class="blu"><h5>Verbali codice della strada</h5></a>
+				<a href="send.php?req=cds" class="blu"><h5>Verbali Codice della Strada</h5></a>
 			</div>
 			<div class="col s12 m4 l4 center">
 				<a href="send.php?req=ce"><i class="material-icons big-icon golden">folder_shared</i></a>
@@ -24,7 +24,7 @@
 			</div>
 			<div class="col s12 m4 l4 center">
 				<a href="send.php?req=st"><i class="material-icons big-icon golden">gavel</i></a>
-				<a href="send.php?req=st" class="blu"><h5>Sanzioni tributarie</h5></a>
+				<a href="send.php?req=st" class="blu"><h5>Sanzioni Tributarie</h5></a>
 			</div>
 		</div>
 	</div>

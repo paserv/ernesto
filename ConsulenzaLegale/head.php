@@ -30,7 +30,7 @@
 			<link rel="icon" type="image/png" sizes="32x32" href="public/icons/favicon-32x32.png">
 			<link rel="icon" type="image/png" sizes="96x96" href="public/icons/favicon-96x96.png">
 			<link rel="icon" type="image/png" sizes="16x16" href="public/icons/favicon-16x16.png">
-			<link rel="manifest" href="/manifest.json">
+			<link rel="manifest" href="public/icons/manifest.json">
 			<link rel="mask-icon" href="public/icons/safari-pinned-tab.svg" color="#5bbad5">
 			<link rel="shortcut icon" href="public/icons/favicon.ico" type="image/x-icon">
 			<script type="text/javascript" src="public/js/jquery-2.1.3.min.js"></script>
