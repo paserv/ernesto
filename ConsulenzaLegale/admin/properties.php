@@ -15,7 +15,7 @@ $controller = new AdminController();
 			<?php include 'header.php'; if ($controller->isAuthenticated()) { ?>
 			<div class="container" style="width: 90%;margin-bottom: 100">
 				<div class="row">
-					<div class="col s12 blu"><h5>Modifica Propriet&agrave; Sito<i class="material-icons prefix left golden med-icon">vpn_key</i></i></h5></div>
+					<div class="col s12 blu"><h5>Modifica Propriet&agrave; Sito<i class="material-icons prefix left golden med-icon">vpn_key</i></h5></div>
 				</div>
 				<div class="card-panel">
 					CONTENUTO
@@ -24,7 +24,7 @@ $controller = new AdminController();
 			<?php } else {?>
 			<div class="container" style="width: 90%;margin-bottom: 100">
 				<div class="row">
-					<div class="col s12 blu"><h5>Impossibile accedere alla pagina<i class="material-icons prefix left golden med-icon">pan_tool</i></i></h5></div>
+					<div class="col s12 blu"><h5>Impossibile accedere alla pagina<i class="material-icons prefix left golden med-icon">pan_tool</i></h5></div>
 				</div>
 				<div class="card-panel">
 					<h5>E' richiesta autenticazione</h5>
