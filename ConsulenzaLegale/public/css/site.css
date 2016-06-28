@@ -59,6 +59,7 @@ main {
 
 .style-footer {
     background-color: #4F81BD !important;
+    z-index: 10;
 }
 
 .style-footer-copyright {

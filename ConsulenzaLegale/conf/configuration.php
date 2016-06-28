@@ -1,7 +1,7 @@
 <?php
 #MAIL FORM CONFIG
 define ( 'DESTINATION_MAIL', 'ricorsiecontroricorsi@gmail.com' );
-define ( 'MAX_ALLOWED_FILE_SIZE', 2048 );// size in KB
+define ( 'MAX_ALLOWED_FILE_SIZE', 5120 );// size in KB
 define ( 'ALLOWED_FILE_EXTENSIONS', "jpg,jpeg,gif,bmp,doc,docx,zip,pdf,txt");
 
 #RECAPTCHA CONFIG#
