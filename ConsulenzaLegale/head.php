@@ -2,7 +2,7 @@
 			<meta charset="utf-8">
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-			<meta name="description" content="Siamo un team di giuristi, con competenze in diverse materie, che intendono offrire dei pareri GRATUITI al cittadino in merito alla possibilità ed alla sussistenza di presupposti per presentare ricorso avverso un Verbale di accertamento per violazioni al Codice della Strada, una Cartella Esattoriale o contro una Sanzione Tributaria." />
+			<meta name="description" content="Siamo un team di giuristi, con competenze in diverse materie, che intendono offrire dei pareri GRATUITI al cittadino in merito alla possibilit&agrave; ed alla sussistenza di presupposti per presentare ricorso avverso un Verbale di accertamento per violazioni al Codice della Strada, una Cartella Esattoriale o contro una Sanzione Tributaria." />
 			<meta name="google" content="notranslate" />
 			<meta name="msapplication-TileColor" content="#ffffff">
 			<meta name="msapplication-TileImage" content="public/icons/ms-icon-144x144.png">
@@ -11,7 +11,7 @@
 			<meta property="og:title" content="Ricorsi & Controricorsi">
 			<meta property="og:image" content="http://www.ricorsiecontroricorsi.it/public/img/logo.png">
 			<meta property="og:site_name" content="Ricorsi & Controricorsi">
-			<meta property="og:description" content="Siamo un team di giuristi, con competenze in diverse materie, che intendono offrire dei pareri GRATUITI al cittadino in merito alla possibilità ed alla sussistenza di presupposti per presentare ricorso avverso un Verbale di accertamento per violazioni al Codice della Strada, una Cartella Esattoriale o contro una Sanzione Tributaria.">
+			<meta property="og:description" content="Siamo un team di giuristi, con competenze in diverse materie, che intendono offrire dei pareri GRATUITI al cittadino in merito alla possibilit&agrave; ed alla sussistenza di presupposti per presentare ricorso avverso un Verbale di accertamento per violazioni al Codice della Strada, una Cartella Esattoriale o contro una Sanzione Tributaria.">
 			<meta property="og:locale" content="it_IT">
 			<link rel="icon" href="favicon.ico" />
 			<link type="text/css" rel="stylesheet" href="public/css/materialize.min.css"  media="screen,projection"/>

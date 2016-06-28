@@ -10,6 +10,7 @@
 			<ul class="right hide-on-med-and-down">
 				<li><a href="who.php">Chi Siamo</a></li>
 				<li><a href="service.php">Servizi</a></li>
+				<li><a href="blog">News</a></li>
 				<li><a href="send.php">Contatti</a></li>
 				<li><a class="dropdown-button" href="#!" data-activates="dropdownReq">Invia Richiesta<i class="material-icons right">arrow_drop_down</i></a></li>
 			</ul>
@@ -18,6 +19,7 @@
 		        <li class="divider"></li>
 		        <li><a class="waves-effect waves-light" href="who.php"><i class="material-icons right">perm_identity</i>Chi Siamo</a></li>
 		        <li><a class="waves-effect waves-light" href="service.php"><i class="material-icons right">business</i>Servizi</a></li>
+		        <li><a class="waves-effect waves-light" href="blog"><i class="material-icons right">rss_feed</i>News</a></li>
 		        <li><a class="waves-effect waves-light" href="send.php"><i class="material-icons right">email</i>Contatti</a></li>
 				<ul class="collapsible" data-collapsible="accordion">
 					<li>
