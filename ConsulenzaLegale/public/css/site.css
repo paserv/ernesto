@@ -21,14 +21,6 @@ main {
 }
 
 @font-face {
-  font-family: 'Palermo';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Palermo'),
-       url(../font/Palermo.ttf) format('truetype');
-}
-
-@font-face {
   font-family: 'Albertus_Medium';
   font-style: normal;
   font-weight: 400;
@@ -36,14 +28,8 @@ main {
        url(../font/Albertus_Medium.ttf) format('truetype');
 }
 
-.palermo-font {
-  font-family: 'Palermo';
-  font-size:250%;
-}
-
 .albertus-font {
   font-family: 'Albertus_Medium';
-  font-size:350%;
 }
 
 .material-icons {
