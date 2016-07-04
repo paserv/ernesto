@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="it-IT" class="no-js">
 <head>
+	<link type="text/css" rel="stylesheet" href="/public/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="/public/css/jquery-ui.css">
+	<link type="text/css" rel="stylesheet" href="/public/css/site.css" />
+	<script type="text/javascript" src="/public/js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="/public/js/jquery-ui-1.11.4.js"></script>
+	<script type="text/javascript" src="/public/js/materialize.min.js"></script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -8,12 +14,6 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
-	<link type="text/css" rel="stylesheet" href="/public/css/materialize.min.css"  media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="/public/css/jquery-ui.css">
-	<link type="text/css" rel="stylesheet" href="/public/css/site.css" />
-	<script type="text/javascript" src="/public/js/jquery-2.1.3.min.js"></script>
-	<script type="text/javascript" src="/public/js/jquery-ui-1.11.4.js"></script>
-	<script type="text/javascript" src="/public/js/materialize.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

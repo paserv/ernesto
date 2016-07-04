@@ -9,7 +9,9 @@
 	<main>
 	<div class="container" style="width: 90%;margin-bottom: 100px;margin-top:50px">
 		<div class="row">
-			<div class="col s12 center"><a href="send.php"><img src="public/img/logo.png"></a></div>
+			<div class="col s12 center"><a href="send.php"><img src="public/img/logo.png" height="200"></a></div>
+			<div class="col s12 center golden"><h3 class="albertus-font">Ricorsi & Controricorsi</h3></div>
+			<div class="col s12 center blu"><h5 class="palermo-font">Richiedi un parere GRATUITO!!!</h5></div>
 		</div>
 		<div class="row" style="margin-top:50px">
 			<div class="col s12 m4 l4 center">
